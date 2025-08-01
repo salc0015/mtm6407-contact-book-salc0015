@@ -8,8 +8,12 @@ const contacts = ref([]);
 
 onMounted(() => {
     const stored = JSON.parse(localStorage.getItem('contacts'));
-    contacts.value = stored || initialContacts;
-    localStorage.setItem('contacts', JSON.stringify(contacts.value));
+    if (stored && stored.length > 0){
+        contacts.value = stored;
+    } else {
+        contacts.value = initialContacts;
+        localStorage.setItem('contacts', JSON.stringify(initialContacts));
+    }
 });
 
 const filteredContacts = computed(() =>

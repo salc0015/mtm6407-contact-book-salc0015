@@ -1,12 +1,12 @@
-import { createRouter, createWebHashHistory } from "vue-router";
+import { createRouter, createWebHistory } from 'vue-router';
 
-import Home from '../routes/Home';
-import NewContact from '../routes/NewContact';
-import EditContact from '../routes/EditContact';
-import ContactDetails from '../routes/ContactDetails';
+import Home from '../routes/Home.vue';
+import NewContact from '../routes/NewContact.vue';
+import EditContact from '../routes/EditContact.vue';
+import ContactDetails from '../routes/ContactDetails.vue';
 
 const router = createRouter({
-    history: createWebHashHistory(),
+    history: createWebHistory(),
     routes: [
         {
             path: '/', 

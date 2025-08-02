@@ -27,6 +27,11 @@ const updateContact = () => {
 <template>
     <div v-if="contact">
         <h2>Edit Contact</h2>
-        
+        <form @submit.prevent="updateContact">
+            <input class="form-control mb-2" v-model="contact.firstName" required />
+            <input class="form-control mb-2" v-model="contact.lastName" required />
+            <input class="form-control mb-2" type="email" v-model="contact.email" required />
+            <button class="btn btn-success">Save</button>
+        </form>
     </div>
 </template>

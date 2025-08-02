@@ -16,3 +16,15 @@ import { RouterLink } from 'vue-router';
     </ul>
   </nav>
 </template>
+
+<style scoped>
+.navbar {
+  box-shadow: 0 2px 4px rgb(0, 0, 0, 0.1);
+}
+
+.nav-link.router-link-exact-active {
+  font-weight: bold;
+  color: #000;
+}
+
+</style>

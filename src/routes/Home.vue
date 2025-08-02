@@ -28,6 +28,15 @@ const filteredContacts = computed(() =>
 
 <template>
     <div>
-        <h2>Contact Book</h2>
+        <h2 class="mb-4">Contact Book</h2>
+
+        <input type="text" class="form-control mb-3" v-model="search" placeholder="Search by name" />
+
+        <div v-if="filteredContacts.length > 0">
+            <ContactCard v-for="contact in filteredContacts" :key="contact.id" :contact="contact" />
+        </div>
+        <div v-else>
+            <p>No contacts found</p>
+        </div>
     </div>
 </template>

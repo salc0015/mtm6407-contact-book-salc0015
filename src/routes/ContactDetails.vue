@@ -24,6 +24,12 @@ const deleteContact = () => {
 
 <template>
 
-
+<div v-if="contact">
+    <h2>{{ contact.firstName }} {{ contact.lastName }}</h2>
+    <p>{{ contact.email }}</p>
+    <router-link class="btn btn-primary me-2" :to="`/edit/${contact.id}`">Edit</router-link>
+    <button class="btn btn-danger" @click="deleteContact">Delete</button>
+    <router-link class="btn btn-secondary ms-2" to="/">Back</router-link>
+</div>
 
 </template>

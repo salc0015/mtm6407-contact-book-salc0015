@@ -3,6 +3,7 @@ import { RouterLink } from 'vue-router';
 </script>
 
 <template>
+  <!-- Navbar with brand and navigation links -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light px-4">
     <RouterLink class="navbar-brand fw-bold" to="/">Contact Book</RouterLink>
 

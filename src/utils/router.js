@@ -5,6 +5,7 @@ import NewContact from '../routes/NewContact.vue';
 import EditContact from '../routes/EditContact.vue';
 import ContactDetails from '../routes/ContactDetails.vue';
 
+// create router instance
 const router = createRouter({
     history: createWebHistory(),
     routes: [
